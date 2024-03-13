@@ -40,7 +40,7 @@ public class UserService {
             existingUser.setPassword(userDetails.getPassword());
             return userRepository.save(existingUser);
         } else {
-            return null; // Можна реалізувати відповідний викид помилки, якщо користувача з даним id не знайдено
+            return null;
         }
     }
 
@@ -56,7 +56,7 @@ public class UserService {
             user.setPassword(userDTO.getPassword());
             return userRepository.save(user);
         } else {
-            // Обробка ситуації, коли електронна адреса вже існує
+            
             return null;
         }
     }
